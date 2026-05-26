@@ -152,7 +152,7 @@ Este projeto é **fan-made** e não possui vínculo oficial com o Sport Club Cor
 
 <div align="center">
 
-**Feito com 🖤 por um fiel torcedor do Corinthians**
+**Feito com  por mais um do bando de loucos**
 
 *Vai Corinthians!*
 
