@@ -4,7 +4,7 @@
 
 > Site dedicado ao Sport Club Corinthians Paulista — informações, elenco atualizado, títulos, ídolos e muito mais.
 
-🔗 **Acesse o site:** [clique aqui](https://seu-link-aqui.com)
+🔗 **Acesse o site:** [clique aqui](https://corinthians-hub.vercel.app/)
 
 ## 📸 Screenshots
 
