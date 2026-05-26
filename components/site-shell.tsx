@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 
 const navigation = [
@@ -18,6 +18,23 @@ const navigation = [
 export function SiteShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   const githubProfileUrl = "https://github.com/Cjr-pjs/Corinthians-Hub";
   const linkedinProfileUrl = "https://www.linkedin.com/in/cleudson-junior-515b933a5/";
@@ -43,7 +60,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <span />
           </button>
 
-          <nav className={`site-nav ${open ? "site-nav--open" : ""}`}>
+          <nav className={`site-nav ${open ? "site-nav--open" : ""}`} aria-label="Navegação principal">
             {navigation.map((item) => {
               const active = pathname === item.href;
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 import { Bebas_Neue, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
   description: "Site editorial do Sport Club Corinthians Paulista com páginas separadas por seção.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +38,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col overflow-x-hidden">{children}</body>
     </html>
   );
 }

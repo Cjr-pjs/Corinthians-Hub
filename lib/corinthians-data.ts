@@ -333,7 +333,7 @@ export const idolosData: IdolItem[] = [
   {
     nome: "Socrates",
     epoca: "1978-1984",
-    foto: "/assets/images/Socrates.jfif",
+    foto: "/assets/images/Socrates.jpg",
        resumo: "Um dos maiores jogadores da história do futebol brasileiro e do Corinthians.Campeão Paulista em 1979, 1982 e 1983, liderou a histórica Democracia Corintiana, tornando-se símbolo da luta pela democracia dentro e fora dos gramados.",
   },
   {

@@ -2000,20 +2000,33 @@ select {
     display: inline-flex;
   }
 
+  .site-header__inner {
+    min-height: 76px;
+  }
+
   .site-nav {
     position: fixed;
-    top: 88px;
-    left: 16px;
-    right: 16px;
+    top: 76px;
+    left: 12px;
+    right: 12px;
+    gap: 8px;
     flex-direction: column;
     align-items: stretch;
     padding: 12px;
     border-radius: 28px;
     background: rgba(0, 0, 0, 0.96);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.56);
     transform: translateY(-14px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .site-nav__link {
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
   }
 
   .site-nav--open {
@@ -2026,6 +2039,14 @@ select {
   .profile-grid,
   .idol-grid,
   .trophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trophy-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .trophy-intro__summary-list {
     grid-template-columns: 1fr;
   }
 
@@ -2049,10 +2070,17 @@ select {
 
   .home-hero__grid {
     gap: 24px;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .home-hero__media {
-    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #hero-escudo {
+    width: min(62vw, 240px);
   }
 
   .home-stats__bar {
@@ -2089,15 +2117,105 @@ select {
 @media (max-width: 640px) {
   .site-footer__inner,
   .page-wrap {
-    width: min(100% - 22px, 1400px);
+    width: min(100% - 16px, 1400px);
   }
 
   .site-header__inner {
-    padding-inline: 12px;
+    padding-inline: 10px;
   }
 
   .navbar-escudo {
     height: 46px;
+  }
+
+  .site-footer {
+    margin-top: 16px;
+  }
+
+  .site-footer__inner {
+    padding: 22px 0 26px;
+  }
+
+  .site-footer__brand {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer__social {
+    width: 100%;
+  }
+
+  .site-footer__social a {
+    flex: 1 1 0;
+    text-align: center;
+  }
+
+  .page-section {
+    padding: 64px 0;
+  }
+
+  .page-section--heroish {
+    padding-top: 52px;
+  }
+
+  .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .section-heading__title,
+  .home-hero__title,
+  .stadium-page__title {
+    font-size: clamp(2.4rem, 16vw, 4rem);
+  }
+
+  .section-heading__description,
+  .home-hero__lede,
+  .route-card p,
+  .profile-card__bio,
+  .idol-card__summary,
+  .timeline-item__body p,
+  .trophy-intro__featured p,
+  .trophy-intro__summary p,
+  .info-panel p,
+  .stadium-layout__copy p,
+  .lightbox__caption h3,
+  .wallpaper-gallery__note,
+  .page-bio__main p,
+  .stadium-biography p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .home-hero {
+    padding: 24px 0 28px;
+  }
+
+  .home-hero__copy {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .home-hero__eyebrow {
+    letter-spacing: 0.24em;
+    font-size: 0.7rem;
+  }
+
+  .home-hero__lede {
+    max-width: 100%;
+  }
+
+  .home-hero__divider {
+    margin-inline: auto;
+  }
+
+  .home-hero__actions {
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .button {
+    width: 100%;
   }
 
   .home-hero__copy,
@@ -2116,23 +2234,157 @@ select {
   }
 
   .home-hero__copy h1 {
-    font-size: clamp(2.8rem, 14vw, 5rem);
+    font-size: clamp(2.6rem, 15vw, 4.4rem);
+  }
+
+  .route-card,
+  .profile-card__body,
+  .idol-card__body,
+  .timeline-item__body,
+  .trophy-intro__featured,
+  .trophy-intro__summary,
+  .info-panel,
+  .stadium-details,
+  .stadium-panel--map,
+  .stadium-panel--gallery {
+    padding: 16px;
+  }
+
+  .route-card {
+    min-height: 180px;
+  }
+
+  .trophy-card {
+    min-height: 0;
+  }
+
+  .trophy-card__body {
+    padding: 16px;
+  }
+
+  .trophy-card__count {
+    font-size: 1.45rem;
+  }
+
+  .trophy-intro__summary-card {
+    padding: 16px;
+  }
+
+  .trophy-intro__summary-card strong {
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
+  }
+
+  .trophy-intro__featured-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .route-grid,
+  .profile-grid,
+  .idol-grid,
+  .trophy-grid,
+  .stadium-gallery {
+    gap: 14px;
+  }
+
+  .players-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    margin-bottom: 18px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .players-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .players-filters__button {
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+
+  .home-stats {
+    padding: 44px 0;
+  }
+
+  .home-stats__bar {
+    grid-template-columns: 1fr;
+  }
+
+  .home-stat {
+    padding: 18px 14px;
+  }
+
+  .home-stat + .home-stat {
+    border-left: 0;
+    border-top: 1px solid #333333;
+  }
+
+  .stadium-grid,
+  .page-bio,
+  .timeline-item,
+  .lightbox__caption,
+  .trophy-intro {
+    gap: 16px;
+  }
+
+  .wallpaper-gallery {
+    columns: 1;
+  }
+
+  .wallpaper-card__content {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .wallpaper-card__content strong {
+    font-size: 1.4rem;
+  }
+
+  .lightbox {
+    padding: 12px;
+  }
+
+  .lightbox__panel {
+    padding: 14px;
+  }
+
+  .lightbox__close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lightbox__image {
+    min-height: min(62vh, 520px);
   }
 
   .stadium-map {
-    height: 320px;
+    height: 260px;
   }
 
   .stadium-gallery {
     grid-template-columns: 1fr;
   }
 
-  .players-grid {
-    grid-template-columns: 1fr;
+  .stadium-lightbox__image {
+    max-width: 92vw;
+    max-height: 68vh;
   }
 
-  .stadium-lightbox__image {
-    max-width: 88vw;
-    max-height: 72vh;
+  .profile-card h2,
+  .idol-card h2,
+  .timeline-item__body h2,
+  .trophy-intro__featured h2,
+  .trophy-intro__summary h2,
+  .info-panel h2 {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+
+  .players-grid {
+    grid-template-columns: 1fr;
   }
 }
