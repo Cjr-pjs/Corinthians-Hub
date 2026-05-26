@@ -4,7 +4,7 @@
 
 > Site dedicado ao Sport Club Corinthians Paulista — informações, elenco atualizado, títulos, ídolos e muito mais.
 
-🔗 **Acesse o site:** [clique aqui](https://seu-link-aqui.com)
+🔗 **Acesse o site:** [clique aqui](https://corinthians-hub.vercel.app/)
 
 ## 📸 Screenshots
 
@@ -134,19 +134,10 @@ Acesse em: `http://localhost:3000`
 
 > O ID `131` corresponde ao Corinthians na base da API-Sports.
 
----
-
-## 🔒 Segurança
-
-- A chave da API **nunca é exposta no frontend**
-- Todas as chamadas à API-Sports passam pela rota interna `/api/players`
-- O arquivo `.env.local` está no `.gitignore`
-
----
 
 ## 📄 Licença
 
-Este projeto é **fan-made** e não possui vínculo oficial com o Sport Club Corinthians Paulista. Desenvolvido apenas para fins educacionais e de aprendizado.
+Este projeto é **fan-made** e não possui vínculo oficial com o Sport Club Corinthians Paulista. Desenvolvido apenas para fins de testes.
 
 ---
 
