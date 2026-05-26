@@ -19,7 +19,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const githubProfileUrl = "https://github.com/Cjr-pjs/Corinthians-Hubs";
+  const githubProfileUrl = "https://github.com/Cjr-pjs/Corinthians-Hub";
   const linkedinProfileUrl = "https://www.linkedin.com/in/cleudson-junior-515b933a5/";
 
   return (
