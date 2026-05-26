@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🖤🤍 Corinthians Hub
+# 🦅 Corinthians Hub
 
 > Site dedicado ao Sport Club Corinthians Paulista — informações, elenco atualizado, títulos, ídolos e muito mais.
 
@@ -143,7 +143,7 @@ Este projeto é **fan-made** e não possui vínculo oficial com o Sport Club Cor
 
 <div align="center">
 
-**Feito com  por mais um do bando de loucos**
+**Feito por mais um do bando de loucos**
 
 *Vai Corinthians!*
 
