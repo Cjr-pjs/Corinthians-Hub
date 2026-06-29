@@ -118,7 +118,7 @@ Acesse em: `http://localhost:3000`
 │       └── players/          # Rota interna com cache (API-Sports)
 ├── components/               # Componentes reutilizáveis
 ├── lib/                      # Funções utilitárias e cache
-├── public/                   # Assets estáticos
+├── public/                   # Assets 
 └── .env.local                # Variáveis de ambiente (não comitar)
 ```
 
